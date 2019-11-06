@@ -1,0 +1,21 @@
+.single-tab
+  &--dark
+    box-shadow: 0 0 0 fade-out($dark-shadow, 0.5)
+    +border--dark
+    &:hover, &:focus
+      box-shadow: 0 30px 50px fade-out($dark-shadow, 0.5)
+    .single-tab__logo
+      &--slack
+        background: $dark-grey--dark
+      &--google-drive
+        background: $dark-grey--dark
+      &--google-search
+        background: $dark-grey--dark
+      &--google-folder
+        background: $dark-grey--dark
+      &--google-news
+        background: $dark-grey--dark
+    .single-tab__title
+      color: $white
+    .single-tab__paragraf
+      color: darken($dark-grey, 20%)

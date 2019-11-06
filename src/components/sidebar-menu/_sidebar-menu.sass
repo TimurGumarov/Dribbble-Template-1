@@ -1,0 +1,46 @@
+.sidebar-menu
+  position: relative
+  width: 100%
+  &__list
+    position: relative
+    width: 100%
+    margin: 0
+    padding: 0
+    list-style-type: none
+  &__item
+    position: relative
+    width: 100%
+    margin-bottom: 22px
+    height: 41px
+  &__link
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    padding: 10px 27px 8px
+    &:hover
+      background: fade-out($primary-color, 0.91)
+    &--active
+      background: fade-out($primary-color, 0.91)
+      +dark-transition(background)
+      &:after // Active button right line highlight
+        content: ""
+        position: absolute
+        right: -1px
+        top: 0
+        width: 2px
+        height: 100%
+        border-radius: 2px
+        background: $primary-color
+        box-shadow: 0 0 5px $primary-color
+        z-index: 100
+      .sidebar-menu__icon-path
+        fill: $primary-color
+  &__icon
+    position: relative
+    height: 100%
+    &-path
+      fill: $grey
+
+@import 'sidebar-menu--dark'

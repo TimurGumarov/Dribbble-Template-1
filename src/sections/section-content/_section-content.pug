@@ -1,0 +1,11 @@
+include /components/breadcrumbs/_breadcrumbs.pug
+include /components/content-header/_content-header.pug
+include /components/content-suggestions/_content-suggestions.pug
+include /components/widget-grid/_widget-grid.pug
+
+mixin section-content
+  section.section-content
+    +breadcrumbs
+    +content-header
+    +content-suggestions
+    +widget-grid

@@ -1,0 +1,7 @@
+include /components/layout-switch/_layout-switch.pug
+include /components/primary-button/_primary-button.pug
+
+mixin content-header-buttons
+  .content-header-buttons
+    +layout-switch
+    +primary-button('big', 'Bulk Select')

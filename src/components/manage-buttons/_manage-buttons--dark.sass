@@ -1,0 +1,11 @@
+.manage-buttons
+  &--dark
+    .manage-buttons__button
+      &:after
+        border-right: 1px solid $dark-grey--dark
+      &:hover
+        .manage-buttons__icon-path
+          fill: $white
+    .manage-buttons__button--light
+      &:after
+        border-right: 1px solid fade-out($light-grey, 0.8)

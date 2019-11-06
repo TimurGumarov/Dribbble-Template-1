@@ -1,0 +1,11 @@
+include /components/primary-button/_primary-button.pug
+include /components/single-task/_single-task.pug
+
+mixin task-list
+  .task-list
+    .task-list__header
+      p3.task-list__title Task List
+      +primary-button('small', 'New task')
+    .task-list__content
+      +single-task('Product Page Redesign', 'High', '/img/Account.jpg', 'Timur Gumarov', '26 Nov 2019', 'active')
+      +single-task('Testing module - Checkout', 'Low', '/img/Alan.jpg', 'Alan Anrich', '30 Nov 2019')

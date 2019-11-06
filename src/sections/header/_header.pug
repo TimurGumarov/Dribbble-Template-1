@@ -1,0 +1,11 @@
+include /components/site-logo/_site-logo.pug
+include /components/header-menu/_header-menu.pug
+include /components/search/_search.pug
+include /components/account/_account.pug
+
+mixin header
+  header.header.header--border-bottom
+    +site-logo
+    +header-menu
+    +search
+    +account

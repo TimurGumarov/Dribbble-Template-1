@@ -1,0 +1,32 @@
+.site-logo
+  position: relative
+  float: left
+  height: 100%
+  width: 81px
+  box-sizing: border-box
+  padding: 17px 19px 14px
+  &--border-bottom
+    &:after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 2px
+      height: 0
+      width: 75px
+      +border-bottom
+      +dark-transition(border)
+  &--border-right
+    +border-right
+    +dark-transition(border)
+  &__icon
+    position: relative
+    height: 100%
+    fill: red
+    cursor: pointer
+    user-select: none
+    z-index: 1000
+    &-path
+      fill: $accent-color
+      +dark-transition(fill)
+
+@import 'site-logo--dark'

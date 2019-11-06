@@ -1,0 +1,8 @@
+mixin sidebar-menu__item(active)
+  li.sidebar-menu__item
+    if active=='active'
+      a.sidebar-menu__link.sidebar-menu__link--active(href!=attributes.href)
+        block
+    else
+      a.sidebar-menu__link(href!=attributes.href)
+        block

@@ -1,0 +1,12 @@
+include /components/tabs-grid/_tabs-grid.pug
+
+mixin content-suggestions
+  .content-suggestions
+    .content-suggestions__row
+      a.content-suggestions__link(href='#')
+        svg.content-suggestions__icon(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 11 10' role="img")
+          title Star icon
+          path.content-suggestions__icon-path(d="M5.5 0l1.7 3.29 3.8.53-2.75 2.56L8.9 10 5.5 8.29 2.1 10l.65-3.62L0 3.82l3.8-.53L5.5 0z")
+        span.content-suggestions__text Suggestions
+
+    +tabs-grid

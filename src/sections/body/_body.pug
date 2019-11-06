@@ -1,0 +1,12 @@
+include /sections/header/_header.pug
+include /sections/sidebar/_sidebar.pug
+include /sections/section-content/_section-content.pug
+include /sections/footer/_footer.pug
+
+mixin body
+  body.body
+    +header
+    +sidebar
+    +section-content
+    +footer
+    script(src="/js/main.js")

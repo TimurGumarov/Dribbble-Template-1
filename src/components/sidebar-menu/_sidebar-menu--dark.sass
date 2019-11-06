@@ -1,0 +1,13 @@
+.sidebar-menu
+  &--dark
+    .sidebar-menu__link
+      &:hover
+        background: fade-out($primary-color--dark, 0.75)
+        .sidebar-menu__icon-path
+          fill: $primary-color
+      &--active
+        background: fade-out($primary-color--dark, 0.75)
+        .sidebar-menu__icon-path
+          fill: $primary-color
+    .sidebar-menu__icon-path
+      fill: $dark-grey

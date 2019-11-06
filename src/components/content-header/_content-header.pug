@@ -1,0 +1,11 @@
+include /components/content-header-buttons/_content-header-buttons.pug
+include /components/sublink/_sublink.pug
+
+mixin content-header
+  .content-header
+    .content-header__row
+      h1.content-header__title Add New Action
+      +content-header-buttons
+
+    .content-header__row
+      +sublink

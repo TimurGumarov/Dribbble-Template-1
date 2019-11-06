@@ -1,0 +1,15 @@
+.widget-grid
+  position: relative
+  width: 100%
+  display: grid
+  grid-gap: 30px
+  grid-template-columns: minmax(456px, 450px) minmax(160px, 690px)
+  +media
+    display: flex
+    flex-wrap: nowrap
+    overflow-x: auto
+    -webkit-overflow-scrolling: touch
+  &::-webkit-scrollbar
+    display: none
+  &::-webkit-scrollbar-button
+    display: none

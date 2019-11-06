@@ -1,0 +1,17 @@
+.tabs-grid
+  position: relative
+  width: 100%
+  display: grid
+  grid-gap: 30px
+  grid-template-columns: repeat(5, minmax(160px, 210px))
+  margin-bottom: 50px
+  +media
+    display: flex
+    justify-content: space-between
+    flex-wrap: nowrap
+    overflow-x: auto
+    -webkit-overflow-scrolling: touch
+  &::-webkit-scrollbar
+    display: none
+  &::-webkit-scrollbar-button
+    display: none

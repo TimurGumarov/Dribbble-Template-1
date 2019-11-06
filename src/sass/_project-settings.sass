@@ -1,0 +1,84 @@
+//- Colors -------------------------------------------------
+$white: #ffffff
+$black: #000000
+$grey: #bdc3c3
+$green: #04d511
+$dark-grey: #989c9f
+$accent-color: #32383b
+$primary-color: #13a3f6
+$light-grey: lighten($grey, 20%)
+
+$dark-grey--dark: #3d4144
+$primary-color--dark: #003d66
+$bg--dark: #242a2d
+$dark-shadow: darken($bg--dark, 12%)
+
+$content-suggestions__logo-bg--slack: #efefff
+$content-suggestions__logo-bg--google-drive: #c4f4f3
+$content-suggestions__logo-bg--google-search: #ffefe0
+$content-suggestions__logo-bg--google-folder: #e4f1cb
+$content-suggestions__logo-bg--google-news: #e8fbf7
+
+$border-color: #ebebeb
+$border-color--dark: #454C4F
+
+//- Mixines ------------------------------------------------
+=button-reset
+  appearance: none
+  border: none
+
+=clearfix
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+
+=border
+  border: 1px solid $border-color
+=border-top
+  border-top: 1px solid $border-color
+=border-right
+  border-right: 1px solid $border-color
+=border-bottom
+  border-bottom: 1px solid $border-color
+=border-left
+  border-left: 1px solid $border-color
+
+=border--dark
+  border: 1px solid $border-color--dark
+=border-top--dark
+  border-top: 1px solid $border-color--dark
+=border-right--dark
+  border-right: 1px solid $border-color--dark
+=border-bottom--dark
+  border-bottom: 1px solid $border-color--dark
+=border-left--dark
+  border-left: 1px solid $border-color--dark
+
+=dark-transition($args...)
+  $full-arg: null
+  @each $arg in $args
+    @if $full-arg == null
+      $full-arg: $arg .2s cubic-bezier(0.645, 0.045, 0.355, 1)
+    @else
+      $full-arg: $full-arg, $arg .2s cubic-bezier(0.645, 0.045, 0.355, 1)
+  transition: $full-arg
+
+=media($size: tablet--landscape)
+  @if $size == phone
+    @media (max-width: 599px)
+      @content
+  @else if $size == tablet
+    @media (max-width: 899px) // 600 - 899
+      @content
+  @else if $size == tablet--landscape
+    @media (max-width: 1199px) // 900 - 1199
+      @content
+  @else if $size == desktop
+    @media (max-width: 1799px) // 1200 - 1799
+      @content
+  @else if $size == desktop--wide
+    @media (min-width: 1800px)
+      @content

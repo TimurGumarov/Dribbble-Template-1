@@ -1,0 +1,23 @@
+mixin single-tab(imgSrc, title, paragraf, added='')
+  if added=='added'
+    a.single-tab.single-tab--added(href!=attributes.href)
+      button.single-tab__settings
+        svg.single-tab__settings-icon(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 10 10' role="img")
+          title Settings icon
+          circle.single-tab__settings-icon-path(cx="5" cy="5" r="1" class="cls-1")
+          path.single-tab__settings-icon-path(d="M9.5 5.5v-1H8a3 3 0 0 0-.51-1.23l1.1-1.1-.71-.71-1.1 1.1a3 3 0 0 0-1.28-.51V.5h-1v1.55a3 3 0 0 0-1.23.51l-1.1-1.1-.71.71 1.1 1.1a3 3 0 0 0-.51 1.23H.5v1h1.55a3 3 0 0 0 .51 1.23l-1.1 1.1.71.71 1.1-1.1A3 3 0 0 0 4.5 8v1.5h1V8a3 3 0 0 0 1.23-.51l1.1 1.1.71-.71-1.1-1.1A3 3 0 0 0 8 5.5zM5 7a2 2 0 1 1 2-2 2 2 0 0 1-2 2z")
+      .single-tab__logo.single-tab__logo--slack
+        img.single-tab__img(src= imgSrc)
+      h2.single-tab__title= title
+      p.single-tab__paragraf= paragraf
+  else
+    a.single-tab(href!=attributes.href)
+      button.single-tab__settings
+        svg.single-tab__settings-icon(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 10 10' role="img")
+          title Settings icon
+          circle.single-tab__settings-icon-path(cx="5" cy="5" r="1" class="cls-1")
+          path.single-tab__settings-icon-path(d="M9.5 5.5v-1H8a3 3 0 0 0-.51-1.23l1.1-1.1-.71-.71-1.1 1.1a3 3 0 0 0-1.28-.51V.5h-1v1.55a3 3 0 0 0-1.23.51l-1.1-1.1-.71.71 1.1 1.1a3 3 0 0 0-.51 1.23H.5v1h1.55a3 3 0 0 0 .51 1.23l-1.1 1.1.71.71 1.1-1.1A3 3 0 0 0 4.5 8v1.5h1V8a3 3 0 0 0 1.23-.51l1.1 1.1.71-.71-1.1-1.1A3 3 0 0 0 8 5.5zM5 7a2 2 0 1 1 2-2 2 2 0 0 1-2 2z")
+      .single-tab__logo.single-tab__logo--slack
+        img.single-tab__img(src= imgSrc)
+      h2.single-tab__title= title
+      p.single-tab__paragraf= paragraf

@@ -1,0 +1,53 @@
+.breadcrumbs
+  position: relative
+  height: 41px
+  padding-top: 4px
+  &-nav
+    position: relative
+    &__list
+      position: relative
+      width: 100%
+      margin: 0
+      padding: 0
+      list-style-type: none
+    &__item
+      position: relative
+      float: left
+      margin-right: 13px
+      font-size: 0.82rem
+      font-weight: bold
+      text-transform: uppercase
+      letter-spacing: -0.011rem
+      &:after
+        content: '/'
+        font-size: 0.9rem
+        position: relative
+        float: left
+        color: $grey
+      &:last-child
+        .breadcrumbs-nav__link
+          color: $accent-color
+          +dark-transition(color)
+        &:after
+          content: none
+    &__link
+      position: relative
+      float: left
+      margin-right: 14px
+      height: 100%
+      text-decoration: none
+      color: $grey
+      &--indicator
+        &:before
+          content: ''
+          position: relative
+          display: block
+          float: left
+          margin: 14px 6px 0 0
+          width: 7px
+          height: 7px
+          background: $green
+          box-shadow: 0 0 3px $green
+          border-radius: 50%
+
+@import 'breadcrumbs--dark'

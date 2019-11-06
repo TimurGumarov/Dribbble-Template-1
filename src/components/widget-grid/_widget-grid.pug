@@ -1,0 +1,10 @@
+include /components/single-widget/_single-widget.pug
+include /components/task-list/_task-list.pug
+
+mixin widget-grid
+  .widget-grid
+
+    +single-widget('Current Task - 2')
+      +task-list
+
+    +single-widget('Market Chart')

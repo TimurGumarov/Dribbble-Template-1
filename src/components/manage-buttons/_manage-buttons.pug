@@ -1,0 +1,24 @@
+mixin manage-buttons(mod, ...buttons)
+  .manage-buttons
+    each button in buttons
+      case button
+        when 'edit'
+          button.manage-buttons__button(class=(mod == 'light' ? 'manage-buttons__button--light' : ''))
+            svg.manage-buttons__icon(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 18 18' role='img')
+              title Edit icon
+              path.manage-buttons__icon-path(d='M3.154 11.91456l7.16638-7.16618 2.90981 2.90982-7.03331 7.29954zM14.47481 6.6798L15.614 5.27438l-.74427-2.18233-2.16555-.72749-1.27225 1.27206zM2.43464 13.475l-.04865.04865v2.11181H4.595z')
+        when 'settings'
+          button.manage-buttons__button(class=(mod == 'light' ? 'manage-buttons__button--light' : ''))
+            svg.manage-buttons__icon(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 18 18' role='img')
+              title Settings icon
+              path.manage-buttons__icon-path(d='M10.022 9A1.022 1.022 0 119 7.97791 1.022 1.022 0 0110.022 9zm3.98242 1a5.07709 5.07709 0 01-.75976 1.83026l1.41553 1.41583-1.41407 1.41407-1.41528-1.41559A5.07432 5.07432 0 0110 14.00482v1.99957H8v-1.99957a5.07432 5.07432 0 01-1.83081-.76025l-1.41528 1.41559-1.41407-1.41407 1.41553-1.41583A5.07726 5.07726 0 013.99561 10H1.99512V8h2.00049a5.07726 5.07726 0 01.75976-1.83026L3.33984 4.75391l1.41407-1.41407 1.41528 1.41559A5.07432 5.07432 0 018 3.99518V1.99561h2v1.99957a5.07432 5.07432 0 011.83081.76025l1.41528-1.41559 1.41407 1.41407-1.41553 1.41583A5.07709 5.07709 0 0114.00439 8h2.00049v2zm-1.89895-1A3.10547 3.10547 0 109 12.106 3.10967 3.10967 0 0012.10547 9z')
+        when 'submenu'
+          button.manage-buttons__button(class=(mod == 'light' ? 'manage-buttons__button--light' : ''))
+            svg.manage-buttons__icon(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 18 18' role='img')
+              title Submenu icon
+              path.manage-buttons__icon-path(d='M11.00714 2.22772A2.00714 2.00714 0 119 .22059a2.00714 2.00714 0 012.00714 2.00713zM9 6.99286A2.00714 2.00714 0 1011.00714 9 2.00714 2.00714 0 009 6.99286zm0 6.77228a2.00714 2.00714 0 102.00714 2.00714A2.00714 2.00714 0 009 13.76514z')
+        when 'delete'
+          button.manage-buttons__button(class=(mod == 'light' ? 'manage-buttons__button--light' : ''))
+            svg.manage-buttons__icon(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 18 18' role='img')
+              title Delete icon
+              path.manage-buttons__icon-path(d='M3.78365 4.84856h10.43256v8.82926a1.60343 1.60343 0 01-1.60343 1.60343H5.38709a1.60343 1.60343 0 01-1.60343-1.60343V4.84856h-.00001zM11.087 2.762V1.719H6.913v1.043H3.784v1.043h10.432V2.762h-3.129z')

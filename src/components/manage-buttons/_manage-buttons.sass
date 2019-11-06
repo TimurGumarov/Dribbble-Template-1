@@ -1,0 +1,43 @@
+.manage-buttons
+  position: relative
+  +clearfix
+  &__button
+    position: relative
+    float: left
+    padding: 2px
+    margin: 0 13px 0 0
+    height: 22px
+    width: 22px
+    +button-reset
+    background: none
+    z-index: 100
+    cursor: pointer
+    &:last-child
+      margin: 0
+    &:hover
+      .single-widget__icon-path
+        fill: $dark-grey
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 2px
+      right: -7px
+      height: 89%
+      border-right: 1px solid $light-grey
+      +dark-transition(border-right)
+    &:last-child:after
+      display: none
+    &--light
+      .manage-buttons__icon-path
+        fill: $white
+      &:after
+        border-right: 1px solid fade-out($light-grey, 0.8)
+  &__icon
+    position: relative
+    display: block
+    height: 100%
+    &-path
+      fill: $grey
+
+@import 'manage-buttons--dark'

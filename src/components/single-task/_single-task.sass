@@ -1,0 +1,92 @@
+.single-task
+  position: relative
+  width: 100%
+  border-radius: 9px
+  padding: 19px 12px 21px 20px
+  margin-bottom: 1px
+  +dark-transition(border)
+  &--active
+    background: $primary-color
+    .single-task__title
+      color: $white
+    .single-task__priority-text
+      color: $white
+    .single-task__buttons-wrapper
+      visibility: visible
+    .single-task__account-name
+      color: $white
+    .single-task__date
+      color: fade-out($light-grey, 0.6)
+      &-icon
+        &-path
+          fill: fade-out($light-grey, 0.6)
+  &__header
+    position: relative
+    width: 100%
+    margin-bottom: 30px
+    +clearfix
+  &__text-wrapper
+    position: relative
+    float: left
+    width: 84%
+  &__title
+    position: relative
+    padding: 0
+    margin: 0 0 11px
+    font-size: 0.75rem
+    line-height: 0.75rem
+    letter-spacing: 0.01rem
+    color: $dark-grey--dark
+    +dark-transition(color)
+  &__priority-text
+    position: relative
+    padding: 0
+    margin: 0
+    font-size: 0.72rem
+    line-height: 0.75rem
+    color: $dark-grey--dark
+    +dark-transition(color)
+  &__buttons-wrapper
+    position: relative
+    visibility: hidden
+    float: right
+    padding-top: 5px
+  &__footer
+    padding-right: 5px
+    +clearfix
+  &__account
+    float: left
+    +clearfix
+    &-image
+      float: left
+      width: 30px
+      margin-right: 10px
+      border-radius: 50%
+    &-name
+      float: left
+      padding: 10px 0
+      margin: 0
+      font-size: 0.7rem
+      line-height: 0.7rem
+      letter-spacing: 0.01rem
+      +dark-transition(color)
+  &__date
+    float: right
+    color: $grey
+    +clearfix
+    &-icon
+      float: left
+      width: 20px
+      margin-right: 10px
+      padding-top: 6px
+      &-path
+        fill: $grey
+    &-text
+      float: left
+      padding: 10px 0
+      margin: 0
+      font-size: 0.7rem
+      line-height: 0.7rem
+      letter-spacing: 0.01rem
+
+@import 'single-task--dark'

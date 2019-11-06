@@ -1,0 +1,19 @@
+include /components/manage-buttons/_manage-buttons.pug
+
+mixin single-task(taskName, priority, imgPath, name, date, active= false)
+  .single-task(class=(active ? 'single-task--active' : ''))
+    .single-task__header
+      .single-task__text-wrapper
+        h3.single-task__title= taskName
+        p.single-task__priority-text= priority+' Priority'
+      .single-task__buttons-wrapper
+        +manage-buttons('light', 'edit', 'delete')
+    .single-task__footer
+      .single-task__account
+        img.single-task__account-image(src=imgPath alt=name+' photo')
+        p.single-task__account-name= name
+      .single-task__date
+        svg.single-task__date-icon(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 18 18' role='img')
+          title Date icon
+          path.single-task__date-icon-path(d='M9 18a9 9 0 119-9 9.01007 9.01007 0 01-9 9zM9 2.10417A6.89583 6.89583 0 1015.89583 9 6.90367 6.90367 0 009 2.10417zm.70833 1.5H8.29167v7.06771h1.41666zm4.52084 4.5625h-6.819v1.66666h6.819z')
+        p.single-task__date-text= date

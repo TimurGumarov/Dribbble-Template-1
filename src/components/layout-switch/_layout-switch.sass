@@ -1,0 +1,24 @@
+.layout-switch
+  position: relative
+  float: left
+  margin: 12px 59px 0 0
+  &__button
+    position: relative
+    width: 24px
+    height: 24px
+    padding: 4px
+    margin: 0
+    +button-reset
+    background: none
+    cursor: pointer
+    &:first-child
+      margin-right: 20px
+    &--active
+      .layout-switch__icon-path
+        fill: $primary-color
+  &__icon
+    position: relative
+    height: 100%
+    width: 100%
+    &-path
+      fill: $grey

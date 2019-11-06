@@ -1,0 +1,60 @@
+.primary-button
+  position: relative
+  background: $primary-color
+  font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif
+  color: $white
+  cursor: pointer
+  +button-reset
+  &--big
+    float: left
+    padding: 13px 52px
+    border-radius: 10px
+    font-weight: bold
+    +dark-transition(transform)
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 50%
+      height: 100%
+      width: 90%
+      transform: translateX(-50%)
+      border-radius: 20px
+      box-shadow: 0 8px 20px fade-out($primary-color, 0.5)
+      +dark-transition(box-shadow)
+    &:hover, &:focus
+      transform: perspective(500px) translatez(20px)
+      &:after
+        box-shadow: 0 12px 30px fade-out($primary-color, 0.5)
+    &:active
+      transform: translateY(0px)
+      transition: none
+      &:after
+        box-shadow: 0 0 0 fade-out($primary-color, 0.5)
+        transition: none
+  &--small
+    float: right
+    padding: 3px 15px
+    border-radius: 5px
+    font-size: 0.65rem
+    letter-spacing: 0.001rem
+    text-transform: uppercase
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 50%
+      height: 100%
+      width: 90%
+      transform: translateX(-50%)
+      border-radius: 20px
+      box-shadow: 0 4px 8px fade-out($primary-color, 0.5)
+      +dark-transition(box-shadow)
+    &:hover, &:focus
+      &:after
+        box-shadow: 0 6px 12px fade-out($primary-color, 0.5)
+    &:active
+      &:after
+        box-shadow: 0 0px 0px fade-out($primary-color, 0.5)
