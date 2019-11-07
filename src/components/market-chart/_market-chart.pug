@@ -1,0 +1,33 @@
+include /components/chart-column/_chart-column.pug
+
+mixin market-chart
+  .market-chart
+    .market-chart__legend
+      span.market-chart__legend-element.market-chart__legend-element--blue Price
+      span.market-chart__legend-element.market-chart__legend-element--aqua Volume
+      span.market-chart__legend-element.market-chart__legend-element--green Goal
+    .market-chart__chart
+      .market-chart__values
+        span.market-chart__value 0
+        span.market-chart__value 15
+        span.market-chart__value 30
+        span.market-chart__value 45
+        span.market-chart__value 60
+        span.market-chart__value 75
+        span.market-chart__value 90
+      +chart-column('01', 0, 34, 42, 57, 0, 0)
+      +chart-column('02', 0, 44, 55, 62, 75, 90)
+      +chart-column('03', 0, 30, 38, 68, 79, 91)
+      +chart-column('04', 0, 19, 46, 68, 92, 100)
+      +chart-column('05', 0, 22, 32, 64, 0, 0)
+      +chart-column('06', 0, 32, 42, 64, 0, 0)
+      +chart-column('07', 0, 42, 47, 67, 0, 0)
+      +chart-column('08', 0, 5, 10, 30, 38, 60)
+      +chart-column('09', 0, 30, 38, 57, 64, 80)
+      +chart-column('10', 0, 3, 46, 68, 80, 93)
+      +chart-column('11', 0, 47, 56, 62, 65, 92)
+      +chart-column('12', 0, 27, 32, 52, 60, 80)
+      +chart-column('13', 0, 16, 19, 34, 38, 55)
+      +chart-column('14', 0, 15, 19, 29, 41, 61, 'inactive')
+      +chart-column('15', 0, 42, 53, 61, 76, 84, 'inactive')
+      +chart-column('16', 0, 42, 53, 61, 76, 84, 'inactive')

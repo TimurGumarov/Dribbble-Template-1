@@ -1,0 +1,62 @@
+.market-chart
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+  width: 100%
+  &__legend
+    position: absolute
+    top: 20px
+    left: 50%
+    transform: translateX(-50%)
+    &-element
+      position: relative
+      float: left
+      margin-right: 31px
+      font-size: 0.7rem
+      font-weight: 600
+      line-height: 0.7rem
+      &:last-child
+        margin: 0
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        left: -11px
+        top: 2px
+        width: 7px
+        height: 7px
+        border-radius: 50%
+      &--blue
+        &:before
+          background: $blue
+      &--aqua
+        &:before
+          background: $aqua
+      &--green
+        &:before
+          background: $green
+  &__chart
+    position: relative
+    display: flex
+    justify-content: space-around
+    width: 86.2%
+    height: 60.5%
+    margin: 0 0 20px 20px
+    color: fade-out($grey, 0.3)
+    +border-bottom
+    +border-left
+    +dark-transition(border)
+  &__values
+    position: absolute
+    display: flex
+    flex-direction: column-reverse
+    justify-content: space-around
+    align-items: center
+    left: -20px
+    bottom: -17px
+    height: 106%
+    font-size: 0.7rem
+    line-height: 0.7rem
+
+@import 'market-chart--dark'

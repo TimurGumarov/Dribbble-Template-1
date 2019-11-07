@@ -1,5 +1,6 @@
 include /components/single-widget/_single-widget.pug
 include /components/task-list/_task-list.pug
+include /components/market-chart/_market-chart.pug
 
 mixin widget-grid
   .widget-grid
@@ -7,4 +8,5 @@ mixin widget-grid
     +single-widget('Current Task - 2')
       +task-list
 
-    +single-widget('Market Chart')
+    +single-widget('Market Chart', 'active')
+      +market-chart

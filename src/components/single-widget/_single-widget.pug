@@ -1,7 +1,7 @@
 include /components/manage-buttons/_manage-buttons.pug
 
-mixin single-widget(widgetName)
-  .single-widget
+mixin single-widget(widgetName, active=false)
+  .single-widget(class=(active ? 'single-widget--active' : ''))
     .single-widget__header
       h3.single-widget__title= widgetName
       .single-widget__buttons-wrapper

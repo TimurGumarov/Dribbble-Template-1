@@ -28,8 +28,15 @@
     line-height: 0.75rem
     letter-spacing: -0.034rem
     color: $dark-grey
+    +dark-transition(color)
   &__buttons-wrapper
     position: relative
     float: right
+  &__content
+    height: calc(100% - 49px)
+    width: 100%
+  &--active
+    .single-widget__title
+      color: $dark-grey--dark
 
 @import 'single-widget--dark'

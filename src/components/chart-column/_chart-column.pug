@@ -1,0 +1,6 @@
+mixin chart-column(name, p1, p2, p3, p4, p5, p6, inactive=false)
+  .chart-column
+    span.chart-column__name= name
+    .chart-column__item(class=(!inactive ? 'chart-column__item--blue' : 'chart-column__item--inactive') style={'bottom': p1+'%', height: p2-p1+'%'})
+    .chart-column__item(class=(!inactive ? 'chart-column__item--aqua' : 'chart-column__item--inactive') style={'bottom': p3+'%', height: p4-p3+'%'})
+    .chart-column__item(class=(!inactive ? 'chart-column__item--green' : 'chart-column__item--inactive') style={'bottom': p5+'%', height: p6-p5+'%'})

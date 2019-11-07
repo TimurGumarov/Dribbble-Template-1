@@ -19,6 +19,8 @@ const darkElements = [
   'manage-buttons',
   'task-list',
   'single-task',
+  'market-chart',
+  'chart-column',
 ];
 
 logo.onclick = () => {
