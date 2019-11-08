@@ -11,10 +11,12 @@
 
 .dark-circle
   position: absolute
-  left: -65%
-  top: -65%
+  top: 0
+  left: 0
   width: 0
   height: 0
+  transform-origin: center center
+  transform: translate(-50%, -50%)
   transition: width 1s cubic-bezier(0.23, 1, 0.32, 1), height 1s cubic-bezier(0.23, 1, 0.32, 1)
   &__wrapper
     position: absolute
