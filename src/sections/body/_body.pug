@@ -5,6 +5,9 @@ include /sections/footer/_footer.pug
 
 mixin body
   body.body
+    .dark-circle__wrapper
+      svg.dark-circle(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 20 20')
+        circle.dark-circle__path(cx='10' cy='10' r='10')
     +header
     +sidebar
     +section-content

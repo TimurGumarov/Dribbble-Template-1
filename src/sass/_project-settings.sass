@@ -63,9 +63,9 @@ $border-color--dark: #454C4F
   $full-arg: null
   @each $arg in $args
     @if $full-arg == null
-      $full-arg: $arg .2s cubic-bezier(0.645, 0.045, 0.355, 1)
+      $full-arg: $arg .4s cubic-bezier(0.645, 0.045, 0.355, 1)
     @else
-      $full-arg: $full-arg, $arg .2s cubic-bezier(0.645, 0.045, 0.355, 1)
+      $full-arg: $full-arg, $arg .4s cubic-bezier(0.645, 0.045, 0.355, 1)
   transition: $full-arg
 
 =media($size: tablet--landscape)
